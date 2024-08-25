@@ -1,85 +1,110 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+Stream Backend Task
+Overview
+This project is a backend application built with NestJS, a progressive Node.js framework for building efficient, reliable, and scalable server-side applications. The application includes features for managing users and transactions.
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+Table of Contents
+Requirements
+Installation
+Environment Setup
+Running the Application
+Running Tests
+Building the Project
+API Documentation
+Contributing
+Requirements
+Before you begin, ensure you have the following installed:
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+Node.js: version 16.x or higher
+npm (Node Package Manager): comes with Node.js
+MongoDB: version 4.x or higher (for database setup)
+Installation
+Clone the repository:
 
-## Description
+bash
+Copy code
+git clone https://github.com/your-username/stream-backend-task.git
+cd stream-backend-task
+Install dependencies:
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+bash
+Copy code
+npm install
+Environment Setup
+Create a .env file in the root of the project directory. You can copy the .env.example file provided:
 
-## Project setup
+bash
+Copy code
+cp .env.example .env
+Update your .env file with the necessary configuration:
 
-```bash
-$ npm install
-```
+env
+Copy code
+MONGODB_URI=mongodb://localhost:27017/your-database-name
+PORT=3000
+JWT_SECRET=your-secret-key
+MONGODB_URI: The connection string for your MongoDB instance.
+PORT: The port on which the server will run (default is 3000).
+JWT_SECRET: A secret key for JWT authentication.
+Running the Application
+To run the application in development mode:
 
-## Compile and run the project
+bash
+Copy code
+npm run start:dev
+This command will start the server using nodemon, which will automatically restart the server whenever changes are made to the code.
 
-```bash
-# development
-$ npm run start
+Running in Production Mode
+To run the application in production mode:
 
-# watch mode
-$ npm run start:dev
+bash
+Copy code
+npm run build
+npm run start:prod
+Running Tests
+This project uses Jest as the testing framework.
 
-# production mode
-$ npm run start:prod
-```
+Run all tests:
 
-## Run tests
+bash
+Copy code
+npm test
+Run unit tests:
 
-```bash
-# unit tests
-$ npm run test
+bash
+Copy code
+npm run test:unit
+Run integration tests:
 
-# e2e tests
-$ npm run test:e2e
+bash
+Copy code
+npm run test:integration
+Test coverage report:
 
-# test coverage
-$ npm run test:cov
-```
+bash
+Copy code
+npm run test:cov
+Building the Project
+To build the project for production:
 
-## Resources
+bash
+Copy code
+npm run build
+This will compile the TypeScript code into JavaScript and output it to the dist directory.
 
-Check out a few resources that may come in handy when working with NestJS:
+API Documentation
+The API documentation is automatically generated using Swagger. Once the application is running, you can access the documentation at:
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+bash
+Copy code
+http://localhost:3000/api
+Contributing
+If you would like to contribute to this project, please follow these steps:
 
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+Fork the repository.
+Create a new branch (git checkout -b feature/YourFeature).
+Make your changes.
+Commit your changes (git commit -am 'Add some feature').
+Push to the branch (git push origin feature/YourFeature).
+Create a new Pull Request.
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
