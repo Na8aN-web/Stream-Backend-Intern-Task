@@ -4,18 +4,6 @@
 
 This project is a backend application built with [NestJS](https://nestjs.com/), a progressive Node.js framework for building efficient, reliable, and scalable server-side applications. The application includes features for managing users and transactions.
 
-## Table of Contents
-
-- [Requirements](#requirements)
-- [Installation](#installation)
-- [Environment Setup](#environment-setup)
-- [Running the Application](#running-the-application)
-- [Running Tests](#running-tests)
-- [Building the Project](#building-the-project)
-- [API Documentation](#api-documentation)
-- [Contributing](#contributing)
-- [License](#license)
-
 ## Requirements
 
 Before you begin, ensure you have the following installed:
@@ -37,6 +25,7 @@ Before you begin, ensure you have the following installed:
 
 
 **Running the Application**
+
 To run the application in development mode:
 
 npm run start:dev
@@ -44,6 +33,7 @@ npm run start:dev
 This command will start the server using nodemon, which will automatically restart the server whenever changes are made to the code.
 
 **Running Tests**
+
 This project uses Jest as the testing framework.
 
 Run all tests:
@@ -55,7 +45,9 @@ npm run test:unit
 Run Integration Tests
 npm run test:integration
 
-API Documentation
+
+**API Documentation**
+
 The API documentation is automatically generated using Swagger. Once the application is running, you can access the documentation at:
 http://localhost:3000/api
 
